@@ -20,7 +20,7 @@
 * 1 - Clone project: git clone https://github.com/vkfromkv/MyEcommerceSite.git
 * 2 - cd EcommerceSite
 * 3 - Create virtual environment: virtualenv myenv
-* 4 - source .\myenv\scripts\activate
+* 4 - source ./myenv/bin/activate
 * 5 - pip install -r requirements.txt
 * 6 - python manage.py runserver
 
