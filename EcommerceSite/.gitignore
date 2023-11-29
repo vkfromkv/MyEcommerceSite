@@ -2,10 +2,6 @@
 
 myenv/
 
-### ignore __pycache__/ ####
-backend/__pycache__/
-base/__pycache__/
-
 ### OSX ###
 .DS_Store
 .AppleDouble
@@ -88,7 +84,8 @@ target/
 *.log
 *.pot
 *.pyc
-__pycache__/
+# ignore below
+**/__pycache__/
 local_settings.py
 
 .env
