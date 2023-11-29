@@ -2,6 +2,10 @@
 
 myenv/
 
+### ignore __pycache__/ ####
+backend/__pycache__/
+base/__pycache__/
+
 ### OSX ###
 .DS_Store
 .AppleDouble
