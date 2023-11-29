@@ -69,9 +69,9 @@ function OrderScreen({ match, history }) {
         dispatch(payOrder(orderId, paymentResult))
     }
 
-    const deliverHandler = () => {
-        dispatch(deliverOrder(order))
-    }
+    // const deliverHandler = () => {
+    //     dispatch(deliverOrder(order))
+    // }
 
     return loading ? (
         <Loader />
@@ -200,7 +200,7 @@ function OrderScreen({ match, history }) {
                                     )}
                                 </ListGroup>
                                 {loadingDeliver && <Loader />}
-                                {userInfo && userInfo.isAdmin && order.isPaid && !order.isDelivered && (
+                                {/* {userInfo && userInfo.isAdmin && order.isPaid && !order.isDelivered && (
                                     <ListGroup.Item>
                                         <Button
                                             type='button'
@@ -210,7 +210,7 @@ function OrderScreen({ match, history }) {
                                             Mark As Delivered
                                         </Button>
                                     </ListGroup.Item>
-                                )}
+                                )} */}
                             </Card>
                         </Col>
                     </Row>

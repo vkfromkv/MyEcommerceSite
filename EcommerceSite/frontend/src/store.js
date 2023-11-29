@@ -4,11 +4,11 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import {
     productListReducer,
     productDetailsReducer,
-    productDeleteReducer,
-    productCreateReducer,
-    productUpdateReducer,
+    // productDeleteReducer,
+    // productCreateReducer,
+    // productUpdateReducer,
     productReviewCreateReducer,
-    productTopRatedReducer,
+    // productTopRatedReducer,
 } from './reducers/productReducers'
 
 import { cartReducer } from './reducers/cartReducers'
@@ -18,9 +18,9 @@ import {
     userRegisterReducer,
     userDetailsReducer,
     userUpdateProfileReducer,
-    userListReducer,
-    userDeleteReducer,
-    userUpdateReducer,
+    // userListReducer,
+    // userDeleteReducer,
+    // userUpdateReducer,
 } from './reducers/userReducers'
 
 import {
@@ -28,33 +28,33 @@ import {
     orderDetailsReducer,
     orderPayReducer,
     orderListMyReducer,
-    orderListReducer,
+    // orderListReducer,
     orderDeliverReducer,
 } from './reducers/orderReducers'
 
 const reducer = combineReducers({
     productList: productListReducer,
     productDetails: productDetailsReducer,
-    productDelete: productDeleteReducer,
-    productCreate: productCreateReducer,
-    productUpdate: productUpdateReducer,
+    // productDelete: productDeleteReducer,
+    // productCreate: productCreateReducer,
+    // productUpdate: productUpdateReducer,
     productReviewCreate: productReviewCreateReducer,
-    productTopRated: productTopRatedReducer,
+    // productTopRated: productTopRatedReducer,
 
     cart: cartReducer,
     userLogin: userLoginReducer,
     userRegister: userRegisterReducer,
     userDetails: userDetailsReducer,
     userUpdateProfile: userUpdateProfileReducer,
-    userList: userListReducer,
-    userDelete: userDeleteReducer,
-    userUpdate: userUpdateReducer,
+    // userList: userListReducer,
+    // userDelete: userDeleteReducer,
+    // userUpdate: userUpdateReducer,
 
     orderCreate: orderCreateReducer,
     orderDetails: orderDetailsReducer,
     orderPay: orderPayReducer,
     orderListMy: orderListMyReducer,
-    orderList: orderListReducer,
+    // orderList: orderListReducer,
     orderDeliver: orderDeliverReducer,
 })
 

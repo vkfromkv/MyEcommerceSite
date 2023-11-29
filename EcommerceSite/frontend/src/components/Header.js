@@ -49,7 +49,7 @@ function Header() {
                                 )}
 
 
-                            {userInfo && userInfo.isAdmin && (
+                            {/* {userInfo && userInfo.isAdmin && (
                                 <NavDropdown title='Admin' id='adminmenue'>
                                     <LinkContainer to='/admin/userlist'>
                                         <NavDropdown.Item>Users</NavDropdown.Item>
@@ -64,7 +64,7 @@ function Header() {
                                     </LinkContainer>
 
                                 </NavDropdown>
-                            )}
+                            )} */}
 
 
                         </Nav>
