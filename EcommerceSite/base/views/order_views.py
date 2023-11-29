@@ -73,15 +73,6 @@ def getMyOrders(request):
     serializer = OrderSerializer(orders, many=True)
     return Response(serializer.data)
 
-
-# @api_view(['GET'])
-# @permission_classes([IsAdminUser])
-# def getOrders(request):
-#     orders = Order.objects.all()
-#     serializer = OrderSerializer(orders, many=True)
-#     return Response(serializer.data)
-
-
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def getOrderById(request, pk):
@@ -110,15 +101,3 @@ def updateOrderToPaid(request, pk):
     order.save()
 
     return Response('Order was paid')
-
-
-# @api_view(['PUT'])
-# @permission_classes([IsAdminUser])
-# def updateOrderToDelivered(request, pk):
-#     order = Order.objects.get(_id=pk)
-
-#     order.isDelivered = True
-#     order.deliveredAt = datetime.now()
-#     order.save()
-
-#     return Response('Order was delivered')

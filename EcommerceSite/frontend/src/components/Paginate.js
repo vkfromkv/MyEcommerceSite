@@ -13,10 +13,6 @@ function Paginate({ pages, page, keyword = '', isAdmin = false }) {
                 <LinkContainer
                     key={x + 1}
                     to={`/?keyword=${keyword}&page=${x + 1}`}
-                    // to={!isAdmin ?
-                    //     `/?keyword=${keyword}&page=${x + 1}`
-                    //     : `/admin/productlist/?keyword=${keyword}&page=${x + 1}`
-                    // }
                 >
                     <Pagination.Item active={x + 1 === page}>{x + 1}</Pagination.Item>
                 </LinkContainer>
