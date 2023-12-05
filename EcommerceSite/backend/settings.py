@@ -132,7 +132,7 @@ DATABASES = {
     }
 }
 
-# DATABASES["default"] = dj_database_url\
+# DATABASES["default"] = dj_database_url
 
 # postgres://purdue_baazaar_django_render_user:pU87ffEkDYDk5BZ6yLrlhG1cN30ZWzDx@dpg-clnal9gapebc739ln5sg-a.oregon-postgres.render.com/purdue_baazaar_django_render
 
