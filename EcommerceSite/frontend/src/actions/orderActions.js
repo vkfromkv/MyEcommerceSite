@@ -19,7 +19,17 @@ import {
 
 import { CART_CLEAR_ITEMS } from '../constants/cartConstants'
 
-
+/**
+ * Creates a new order.
+ * 
+ * This asynchronous action creator dispatches an action to indicate the start of the order
+ * creation process, then makes an API request to create the order. Upon success, it dispatches
+ * an action with the created order data and clears the cart items. In case of failure, it dispatches
+ * an error action.
+ *
+ * @param {Object} order - The order data to be created.
+ * @returns {Function} A thunk action that handles the asynchronous operation.
+ */
 export const createOrder = (order) => async (dispatch, getState) => {
     try {
         dispatch({
@@ -66,7 +76,16 @@ export const createOrder = (order) => async (dispatch, getState) => {
     }
 }
 
-
+/**
+ * Fetches details of a specific order.
+ * 
+ * This function dispatches a request action, then makes an API call to fetch the order details
+ * based on the provided ID. It dispatches a success action with the order details on success,
+ * or an error action in case of failure.
+ *
+ * @param {string} id - The ID of the order to fetch details for.
+ * @returns {Function} A thunk action that handles the asynchronous operation.
+ */
 export const getOrderDetails = (id) => async (dispatch, getState) => {
     try {
         dispatch({
@@ -106,7 +125,17 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
 }
 
 
-
+/**
+ * Handles the payment process for an order.
+ * 
+ * Dispatches an action to indicate the start of the payment process, then makes an API request
+ * to update the order as paid with the provided payment result. On success, it dispatches a success
+ * action, and in case of failure, it dispatches an error action.
+ *
+ * @param {string} id - The ID of the order to be paid.
+ * @param {Object} paymentResult - The result of the payment process.
+ * @returns {Function} A thunk action that handles the asynchronous operation.
+ */
 export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
     try {
         dispatch({
@@ -146,7 +175,15 @@ export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
     }
 }
 
-
+/**
+ * Lists all orders made by the logged-in user.
+ * 
+ * Dispatches a request action and makes an API call to retrieve all orders made by the current user.
+ * On success, it dispatches a success action with the list of orders, and in case of failure,
+ * it dispatches an error action.
+ *
+ * @returns {Function} A thunk action that handles the asynchronous operation.
+ */
 export const listMyOrders = () => async (dispatch, getState) => {
     try {
         dispatch({

@@ -23,6 +23,17 @@ import {
 
 import { ORDER_LIST_MY_RESET } from '../constants/orderConstants'
 
+/**
+ * Logs in a user.
+ * 
+ * Dispatches a request action, then makes an API call to authenticate the user. Upon successful
+ * authentication, it dispatches a success action with user data and stores the user info in local storage.
+ * In case of failure, it dispatches an error action.
+ *
+ * @param {string} email - The email of the user.
+ * @param {string} password - The password of the user.
+ * @returns {Function} A thunk action that handles the asynchronous operation.
+ */
 export const login = (email, password) => async (dispatch) => {
     try {
         dispatch({
@@ -58,7 +69,13 @@ export const login = (email, password) => async (dispatch) => {
     }
 }
 
-
+/**
+ * Logs out the current user.
+ * 
+ * Removes user information from local storage and dispatches actions to reset user and order details.
+ *
+ * @returns {Function} A thunk action that handles the operation.
+ */
 export const logout = () => (dispatch) => {
     localStorage.removeItem('userInfo')
     dispatch({ type: USER_LOGOUT })
@@ -66,7 +83,18 @@ export const logout = () => (dispatch) => {
     dispatch({ type: ORDER_LIST_MY_RESET })
 }
 
-
+/**
+ * Registers a new user.
+ * 
+ * Dispatches a request action, then makes an API call to register the user. Upon successful
+ * registration, it dispatches success actions for both registration and login, and stores the user
+ * info in local storage. In case of failure, it dispatches an error action.
+ *
+ * @param {string} name - The name of the user.
+ * @param {string} email - The email of the user.
+ * @param {string} password - The password for the new account.
+ * @returns {Function} A thunk action that handles the asynchronous operation.
+ */
 export const register = (name, email, password) => async (dispatch) => {
     try {
         dispatch({
@@ -108,6 +136,16 @@ export const register = (name, email, password) => async (dispatch) => {
 }
 
 
+/**
+ * Fetches details of a specific user.
+ * 
+ * Dispatches a request action, then makes an API call to fetch user details based on the provided ID.
+ * Requires user authentication. On success, it dispatches a success action with the user details,
+ * or an error action in case of failure.
+ *
+ * @param {string} id - The ID of the user to fetch details for.
+ * @returns {Function} A thunk action that handles the asynchronous operation.
+ */
 export const getUserDetails = (id) => async (dispatch, getState) => {
     try {
         dispatch({
@@ -146,7 +184,16 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
     }
 }
 
-
+/**
+ * Updates the profile of the logged-in user.
+ * 
+ * Dispatches a request action and makes an API call to update the user profile. Requires user
+ * authentication. On successful update, it dispatches success actions for both profile update and
+ * user login, and updates the user info in local storage. In case of failure, it dispatches an error action.
+ *
+ * @param {Object} user - The updated user data.
+ * @returns {Function} A thunk action that handles the asynchronous operation.
+ */
 export const updateUserProfile = (user) => async (dispatch, getState) => {
     try {
         dispatch({
