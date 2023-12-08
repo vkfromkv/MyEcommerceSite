@@ -1,3 +1,4 @@
+# List of products
 products = [
     {
         '_id': '1',

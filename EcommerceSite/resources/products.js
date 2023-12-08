@@ -1,3 +1,22 @@
+/**
+ * Represents a product.
+ * @typedef {Object} Product
+ * @property {string} _id - The unique identifier of the product.
+ * @property {string} name - The name of the product.
+ * @property {string} image - The path to the image of the product.
+ * @property {string} description - The description of the product.
+ * @property {string} brand - The brand of the product.
+ * @property {string} category - The category of the product.
+ * @property {number} price - The price of the product.
+ * @property {number} countInStock - The available stock of the product.
+ * @property {number} rating - The rating of the product.
+ * @property {number} numReviews - The number of reviews for the product.
+ */
+
+/**
+ * Array containing a list of products.
+ * @type {Product[]}
+ */
 const products = [
   {
     '_id': '1',
