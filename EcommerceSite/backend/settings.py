@@ -132,23 +132,6 @@ DATABASES = {
     }
 }
 
-# DATABASES["default"] = dj_database_url
-
-# postgres://purdue_baazaar_django_render_user:pU87ffEkDYDk5BZ6yLrlhG1cN30ZWzDx@dpg-clnal9gapebc739ln5sg-a.oregon-postgres.render.com/purdue_baazaar_django_render
-
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'proshop',
-#        'USER': 'dennisivy',
-#        'PASSWORD': os.environ.get('DB_PASS'),
-#        'HOST': os.environ.get('HOST'),
-#        'PORT': '5432'
-#    }
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
